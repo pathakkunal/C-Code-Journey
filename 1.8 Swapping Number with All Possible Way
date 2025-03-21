@@ -1,0 +1,79 @@
+
+   // Swapping without using a third variable
+
+
+
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    // Input two numbers from user
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    // Swapping without using third variable
+    a = a + b;  // Step 1: a becomes the sum of a and b
+    b = a - b;  // Step 2: b is now the original value of a
+    a = a - b;  // Step 3: a is now the original value of b
+
+    // Output the result
+    printf("After swapping: a = %d, b = %d\n", a, b);
+    return 0;
+}
+
+
+
+
+
+      //Swapping using a third variable
+
+
+      #include <stdio.h>
+
+    int main() {
+    int a, b, temp;
+
+    // Input two numbers from user
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    // Swapping using a third variable
+    temp = a; // Store the value of a in temp
+    a = b;    // Assign value of b to a
+    b = temp; // Assign value of temp (original a) to b
+
+    // Output the result
+    printf("After swapping: a = %d, b = %d\n", a, b);
+    return 0;
+}
+
+
+
+
+          // Swapping in a single statement using the comma operator
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    // Input two numbers from user
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    // Swapping in a single statement using the comma operator
+    a = (a + b) - (b = a);
+
+    // Output the result
+    printf("After swapping: a = %d, b = %d\n", a, b);
+    return 0;
+}
+
+
+
+
+      

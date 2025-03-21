@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double principal, rate, amount;
+    int time, n;
+    
+    printf("Enter the principal amount (P): ");
+    scanf("%lf", &principal);
+
+    printf("Enter the annual interest rate (in percentage): ");
+    scanf("%lf", &rate);
+    
+    printf("Enter the number of times that interest is compounded per year (n): ");
+    scanf("%d", &n);
+    
+    printf("Enter the time the money is invested for (in years): ");
+    scanf("%d", &time);
+
+    amount = principal * pow((1 + (rate / (n * 100))), (n * time));
+
+    double compoundInterest = amount - principal;
+    
+    printf("\nTotal amount after %.2f years: %.2f\n", (double)time, amount);
+    printf("Compound Interest earned: %.2f\n", compoundInterest);
+
+    return 0;
+}
